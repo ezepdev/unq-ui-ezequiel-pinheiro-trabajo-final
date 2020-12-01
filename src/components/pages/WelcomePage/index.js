@@ -14,9 +14,9 @@ const WelcomePage = (props) => {
 
 	return (
 		<div>
-			Welcome to the game
+			<h1>Bienvenido a Piedra-Papel-Tijera-Lagarto-Spock</h1>
 			<button onClick={handleClick} >
-				Start !!! 
+				Jugar vs PC
 			</button>
 		</div>
 	)

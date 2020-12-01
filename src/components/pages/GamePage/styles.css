@@ -1,0 +1,66 @@
+.container {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: 2em;
+}
+
+.characters-container {
+  padding: 1em;
+  width: 50%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 3em;
+}
+
+.character-selector {
+  position: relative;
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.character-selector:hover .overlay {
+  opacity: 0.6;
+}
+
+.character-selector:hover h4 {
+  opacity: 1;
+  color: black;
+}
+
+.overlay {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+}
+
+.character-selector:hover {
+  background-color: #f5304d;
+  border: 3px solid rgb(15, 1, 4);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+#titulo {
+  grid-column: 1 / 4;
+}
+
+.character-selector img {
+  object-fit: fill;
+  width: 80%;
+  height: 80%;
+}
+
+#spock {
+  grid-column: 3;
+  grid-row: 3;
+}
