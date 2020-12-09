@@ -4,7 +4,7 @@ import { gestures } from 'helpers'
 import './styles.css'
 
 
-const VersusField = ({gestureNameOne,gestureNameTwo, result}) => {
+const VersusField = ({games,gestureNameOne,gestureNameTwo, result}) => {
 		
 	const ImageGestureOne = gestures.find(gesture => gesture.name === gestureNameOne).image
 	const ImageGestureTwo = gestures.find(gesture => gesture.name === gestureNameTwo).image
@@ -17,8 +17,12 @@ const VersusField = ({gestureNameOne,gestureNameTwo, result}) => {
 	)
 	return (
 		<div class="card mt-5 border">
+			<div className="card-header bg-light">
+				<h4>Partida: Mejor de {games}</h4>
+			</div>
+			
 			<div className="card-header bg-dark text-white">
-				<h3>{result.winner ? winningResult : 'Empate'} </h3>
+				<h3>{result.winner !== 'Anyone' ? winningResult : 'Empate'} </h3>
 			</div>
 			<div class="card-body p-0 bg-trasparent">
 				<div className="versusField-container m-2 p-2 m-1">
@@ -30,7 +34,7 @@ const VersusField = ({gestureNameOne,gestureNameTwo, result}) => {
 				</div>
 			<div className="card-footer bg-info text-white">
 				{	
-						result.winner ?
+						result.winner !== 'Anyone' ?
 								<h4>
 								{result.gestureWinner + ' mata a ' + result.gestureLoser} 
 				<div class="dropdown-divider"></div>
