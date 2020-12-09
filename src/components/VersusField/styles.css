@@ -1,0 +1,47 @@
+.versusField-container {
+  display: grid;
+  height: 10em;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.versusField-container p {
+  margin: 2px;
+}
+
+.versusField-container h4 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.versusField-container img {
+  margin: 10px;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+#labelPlayer {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 10px;
+}
+
+#labelPC {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#gestureNameOne {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0 auto;
+}
+
+#gestureNameTwo {
+  grid-column: 3;
+  grid-row: 2;
+  margin: 0 auto;
+}

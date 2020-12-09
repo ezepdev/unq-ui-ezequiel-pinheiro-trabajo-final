@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import WelcomePage from 'components/pages/WelcomePage'
 import GamePage from 'components/pages/GamePage'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
