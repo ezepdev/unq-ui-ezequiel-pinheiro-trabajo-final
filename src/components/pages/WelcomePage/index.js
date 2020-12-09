@@ -17,7 +17,7 @@ const WelcomePage = (props) => {
 			
 			<h1 className="mt-5">Piedra-Papel-Tijera-Lagarto-Spock</h1>			
 			<div className="container-md text-center w-25 mt-5 p-3">
-				<button type="button" className="btn btn-outline-primary btn-lg btn-block" onClick={handleClick} >
+				<button type="button" className="btn btn-outline-dark btn-lg btn-block" onClick={handleClick} >
 					Jugar vs PC
 				</button>
 			</div>

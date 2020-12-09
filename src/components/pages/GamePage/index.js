@@ -27,13 +27,15 @@ const GamePage = () => {
 				setResult(
 				{
 					winner: 'Player',
-					message: 'Tu ganas', 
+					gestureWinner: playerChoice,
+					gestureLoser: computerChoice,
 					optionalMessage: winnerMessageFor(playerChoice, computerChoice)
 				})
 				:
 				setResult({
 					winner: 'PC',
-					message: 'Tu pierdes',
+					gestureWinner: computerChoice,
+					gestureLoser: playerChoice,
 					optionalMessage: 'Mala suerte, intentalo otra vez'
 				})
 		}
@@ -60,7 +62,7 @@ const GamePage = () => {
 					{	
 						(Object.keys(result).length !== 0) ?
 						<>					
-								<VersusField gestureNameOne={playerChoice} gestureNameTwo={computerChoice} resultMessage={result.message} messageOptional={result.optionalMessage} />
+								<VersusField gestureNameOne={playerChoice} gestureNameTwo={computerChoice} result={result} />
 						</>
 							:
 							null
